@@ -8,7 +8,7 @@
       "background_image_url": "https://github.com/taeGnues/shoppi-app/assets/112752089/7d508593-5477-4957-aead-e92f92634909",
       "badge": {
         "label": "기획전",
-        "background_color": "https://github.com/taeGnues/shoppi-app/assets/112752089/f5e3cbb7-f0fc-4737-8445-fe8b3dde204e"
+        "background_color": "#967a6d"
       },
       "label": "따스한 겨울\n준비하기",
       "product_detail":{
@@ -16,7 +16,7 @@
         "label": "캐시미어 100% 터틀넥 스웨터",
         "discount_rate": 9,
         "price" : 102000,
-        "thumnail_image_url": "",
+        "thumnail_image_url": "https://github.com/taeGnues/PracticeBaekjoon/assets/112752089/29160654-7b39-4aba-aba0-ff2ad7dd786f",
         "product_id": "FW-twg-sweater-1"
       }
     },

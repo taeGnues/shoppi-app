@@ -5,10 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TableLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
-import org.json.JSONObject
+import com.google.gson.Gson
 
 class HomeFragment : Fragment() {
     override fun onCreateView(
@@ -22,30 +24,29 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val viewpager = view.findViewById<ViewPager2>(R.id.viewpager_home_banner)
+        val viewpagerIndicator = view.findViewById<TableLayout>(R.id.viewpager_home_banner_indicator)
 
         val assetLoader = AssetLoader()
-        val homeData = assetLoader.getJsonString(requireContext(), "home.json")
-
-        if (!homeData.isNullOrEmpty()) { // homeData가 null일 수 있음.
-            val jsonObject = JSONObject(homeData)
-            // json 형식의 string을 jsonObject로 변환
-            val title = jsonObject.getJSONObject("title")
-            //getJSONObject로 "title"에 해당하는 객체를 가져올 수 있음.
-            val text = title.getString("text") // title의 text에 할당된 값
-            val iconUrl = title.getString("icon_url")
-            val titleValue = Title(text, iconUrl)
+        val homeJsonString = assetLoader.getJsonString(requireContext(), "home.json")
+// Asset에서 가져온 Json 파일에서 string을 가져옴.
+        if (!homeJsonString.isNullOrEmpty()) { // homeData가 null일 수 있음.
+            val gson = Gson()
+            val homeData = gson.fromJson(homeJsonString, HomeData::class.java)
+// Gson 객체를 선언해주고 Gson의 fromJson 메소드에 Json string과 변환할 java 클래스를 인수로 넘김
 
 
-            val tv_home_appbar_title = view.findViewById<TextView>(R.id.tv_toolbar_home_title)
-            val iv_home_appbar_icon = view.findViewById<ImageView>(R.id.iv_toolbar_home_icon)
+            val toolbarTitle = view.findViewById<TextView>(R.id.tv_toolbar_home_title)
+            val toolbarIcon = view.findViewById<ImageView>(R.id.iv_toolbar_home_icon)
+            toolbarTitle.text = homeData.title.text
 
-            tv_home_appbar_title.text = titleValue.text
             Glide
                 .with(this)
-                .load(titleValue.iconUrl)
-                .into(iv_home_appbar_icon);
+                .load(homeData.title.iconUrl)
+                .into(toolbarIcon);
 
-
+            viewpager.adapter = HomeBannerAdapter().apply {
+                submitList(homeData.topBanners)
+            } // 인스턴스 생성과 동시에 데이터 전달
         }
-    }
-}
+    }}
