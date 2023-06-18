@@ -49,24 +49,29 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewpager_home_banner"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
 
-            <TableLayout
+            <com.google.android.material.tabs.TabLayout
                 android:id="@+id/viewpager_home_banner_indicator"
                 android:layout_width="0dp"
                 android:layout_height="45dp"
+                app:tabBackground="@drawable/selector_viewpager_indicator"
+                app:tabIndicatorHeight="0dp"
+                app:tabGravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/viewpager_home_banner"/>
-
+            <!--기본탭레이아웃 끄기-->
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
