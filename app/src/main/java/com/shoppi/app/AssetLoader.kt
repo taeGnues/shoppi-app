@@ -2,16 +2,16 @@ package com.shoppi.app
 
 import android.content.Context
 
-class AssetLoader {
+class AssetLoader(private val context: Context) {
 
-    fun getJsonString(context: Context, filename: String):String?{
+    fun getJsonString(filename: String):String?{
         return kotlin.runCatching {
-            loadAsset(context, filename)
+            loadAsset(filename)
         }.getOrNull()
     }
 
 
-    private fun loadAsset(context:Context, filename:String): String {
+    private fun loadAsset(filename:String): String {
         return context.assets.open(filename).use{ inputStream ->
             val size = inputStream.available()
 // inputStream에 실제 데이터가 있는지 확인.
