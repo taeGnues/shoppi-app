@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">shoppi-android</string>
+    <string name="unit_discount_rate">%d%%</string>
+    <string name="unit_discount_currency">%s원</string>
     <string name="description_product">상품 상세 대표 이미지</string>
     <string name="title_product_detail_image">상품 설명</string>
     <string name="description_product_detail_image">상품 상세 이미지</string>
