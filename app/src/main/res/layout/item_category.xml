@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_bluegrey_r20"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--
+    item의 constraintlayout을 match_parent로 할 경우,
+    recyclerview에서 item 개수에따라 가로 길이를 균등하게 나눠줌
+    모서리가 각진형태, 둥근형태 등에 사용할 수 있음
+    shapeAppearanceOverlay=""에 style를 넘겨주면 됨-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_category_thumbnail"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Circle"
+
+        />
+
+    <TextView
+        style="@style/TextCaption2.White.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_purple_r24"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:text="@string/label_category_new"
+        app:layout_constraintEnd_toEndOf="@id/iv_category_thumbnail"
+        app:layout_constraintTop_toTopOf="@id/iv_category_thumbnail" />
+
+    <TextView
+        style="@style/TextSubtitle2.Black02.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:maxLines="1"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_category_thumbnail"
+        tools:text="여성패션" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
