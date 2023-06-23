@@ -1,0 +1,76 @@
+{
+  "categories": [
+    {
+      "category_id": "fashion-female",
+      "label": "여성패션",
+      "thumbnail_image_url": "https://github.com/taeGnues/shoppi-app/assets/112752089/4ec8320f-e0b5-4a83-98b4-37d83c4ba58a",
+      "updated": false
+    },
+    {
+      "category_id": "fashion-male",
+      "label": "남성패션",
+      "thumbnail_image_url": "https://github.com/taeGnues/shoppi-app/assets/112752089/bf32ddfc-7003-465b-8251-7d1f82f7939b",
+      "updated": false
+    },
+    {
+      "category_id": "kids",
+      "label": "유아동",
+      "thumbnail_image_url": "https://github.com/taeGnues/shoppi-app/assets/112752089/a75eeca6-2274-4459-86d8-fcc67030558c",
+      "updated": false
+    },
+    {
+      "category_id": "electronics",
+      "label": "가전/디지털",
+      "thumbnail_image_url": "https://github.com/taeGnues/shoppi-app/assets/112752089/6348050d-e39d-4acc-8cf3-8dd6f67e1938",
+      "updated": false
+    },
+    {
+      "category_id": "furniture",
+      "label": "가구/인테리어",
+      "thumbnail_image_url": "https://github.com/taeGnues/shoppi-app/assets/112752089/580f3f60-f30e-4f00-b6e6-fdae7a7ef148",
+      "updated": true
+    },
+    {
+      "category_id": "sports",
+      "label": "스포츠/레저",
+      "thumbnail_image_url": "https://github.com/taeGnues/shoppi-app/assets/112752089/332a8e81-a033-420c-a1aa-53bfc9e96a25",
+      "updated": false
+    },
+    {
+      "category_id": "books",
+      "label": "도서/음반",
+      "thumbnail_image_url": "https://github.com/taeGnues/shoppi-app/assets/112752089/2928cde4-7a45-46fb-ae83-8c9b6ae6c28a",
+      "updated": false
+    },
+    {
+      "category_id": "pets",
+      "label": "반려동물",
+      "thumbnail_image_url": "https://github.com/taeGnues/shoppi-app/assets/112752089/c602cbd1-d258-4c55-8d7b-39e95dec2ee1",
+      "updated": false
+    },
+    {
+      "category_id": "car",
+      "label": "자동차",
+      "thumbnail_image_url": "https://github.com/taeGnues/shoppi-app/assets/112752089/0ff99b79-866b-48f2-b266-61ff766e4136",
+      "updated": false
+    },
+    {
+      "category_id": "fancy-goods",
+      "label": "잡화",
+      "thumbnail_image_url": "https://github.com/taeGnues/shoppi-app/assets/112752089/86e0d440-a76d-437c-92ac-3af647c2e302",
+      "updated": false
+    },
+    {
+      "category_id": "food",
+      "label": "식품",
+      "thumbnail_image_url": "https://github.com/taeGnues/shoppi-app/assets/112752089/75b59ef7-2553-4ced-aa16-77e2c5dd7795",
+      "updated": false
+    },
+    {
+      "category_id": "beauty",
+      "label": "뷰티",
+      "thumbnail_image_url": "https://github.com/taeGnues/shoppi-app/assets/112752089/96307aff-5b54-471d-a05b-27421700bfd5",
+      "updated": true
+    }
+  ]
+}
